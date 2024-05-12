@@ -1,0 +1,111 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+*:focus{
+  outline: none;
+}
+
+body{
+  position: relative;
+  width: 100;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  background: url(/images/Picsart_24-04-22_00-03-34-109.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.login{
+  width: 400px;
+  height: auto;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.heading{
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 80px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+input,
+.submit{
+  width: 90%;
+  height: 35px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+  background:rgba(255,255,255,0.3);
+  border: none;
+  color: #fff;
+  padding: 15px;
+  transition: .5s;
+  text-transform: capitalize;
+}
+
+input::placeholder{
+  color: #fff;
+}
+
+input:focus,
+submit:hover{
+  background: #fff;
+  color: #000;
+}
+
+input:focus::placeholder{
+  color: #000;
+}
+
+.submit{
+  width: 30%;
+  padding: 0 20px;
+  cursor: pointer;
+  margin: 50px auto 0;
+  text-align: center;
+  text-decoration: none;
+  padding:6px;
+}
+
+.link{
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+  color: rgba(255,255,255,0.5);
+  display: block;
+  margin: 30px auto;
+  
+}
+
+.link:hover{
+  color:#fff;
+}
+
+.alert-box{
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 150px;
+  max-width: 90%;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  text-transform: capitalize;
+  background: rgb(255,119,119);
+  border-top: 10px solid rgb(255,37,37);
+  border-bottom-left-radius: 10px;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  transition: 1s;
+}

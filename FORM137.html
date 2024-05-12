@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM 137</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/images/Picsart_24-04-22_00-03-34-109.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px;
+            margin: 0;
+        }
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+        h2 {
+            color: black;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #upload-container {
+            text-align: center;
+            max-width: 400px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #preview {
+            text-align: center;
+        }
+        #preview img {
+            max-width: 100%;
+            height: auto;
+        }
+        h1{
+          color: white;
+          font-family: 'Times New Roman', Times, serif;
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>IF you're requesting a Form 137 from SFHS, please Upload the photo of the Form 137 Request that you got in the Registrar Office </h1>
+        <div id="upload-container">
+            <h2>Upload Your Form 137 Photo</h2>
+            <form id="uploadForm" action="/content.html" method="post" enctype="multipart/form-data">
+                <input type="file" name="photo" id="photoInput" accept="image/*">
+                <button type="submit">Upload</button>
+            </form>
+            
+            <div id="preview"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('photoInput').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var preview = document.getElementById('preview');
+                preview.innerHTML = '<img src="' + e.target.result + '" alt="Preview">';
+            };
+            reader.readAsDataURL(file);
+        });
+    </script>
+</body>
+</html>
